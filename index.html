@@ -1928,16 +1928,14 @@ likeButton.addEventListener('click', () => {
 });
 
 
-     document.addEventListener("DOMContentLoaded", function () {
-        const showIngredientsButton = document.querySelector(".show-ingredients-btn");
-        const ingredientsList = document.querySelector(".ingredients-list");
+ document.addEventListener("DOMContentLoaded", function () {
+        const showIngredientsButtons = document.querySelectorAll(".show-ingredients-btn");
+        const ingredientsLists = document.querySelectorAll(".ingredients-list");
 
-        showIngredientsButton.addEventListener("click", function () {
-            if (ingredientsList.classList.contains("hidden")) {
-                ingredientsList.classList.remove("hidden");
-            } else {
-                ingredientsList.classList.add("hidden");
-            }
+        showIngredientsButtons.forEach((button, index) => {
+            button.addEventListener("click", function () {
+                ingredientsLists[index].classList.toggle("hidden");
+            });
         });
     });
 
