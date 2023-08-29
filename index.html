@@ -416,7 +416,7 @@ margin-left: 10px;
 }
 
 .tab button {
-  background-color: #f2f2f2;
+ background-color: #030303;
   border: none;
   color: black;
   padding: 5px 8px;
@@ -425,6 +425,9 @@ margin-left: 10px;
   transition: background-color 0.3s;
   border: 1px solid black;
   font-size: 25px;
+  color: white;
+  margin: 5px;
+  width: 250px;
 }
 
 .tab button:hover {
@@ -565,6 +568,36 @@ canvas {
 .ingredients-list ul li {
   color: black;
 }
+
+        /*MEJOR INICION  */
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
 
 
@@ -710,6 +743,16 @@ canvas {
 
 
         <div class="tab">
+
+             
+        <div class="navbar">
+          <div class="dropdown">
+
+          <button class="dropbtn">Mercado 
+            <i class="fa fa-caret-down"></i>
+          </button>
+
+              <div class="dropdown-content">
           <button class="tablinks" onclick="openCity(event, 'all')">Todos los Productos</button>
           <button class="tablinks" onclick="openCity(event, 'London')" >Zepelines</button>
           <button class="tablinks" onclick="openCity(event, 'Paris')" >Cokies</button>
@@ -723,8 +766,14 @@ canvas {
             <button id="scrollButton" class="custom-button">Scroll</button>
           </header>
           <!--<button id="likeButton"><strong>Confetti</strong></button>-->
+        </div>
+
+            </div> 
+          </div>
 
         </div>
+
+              
 
         <hr>
         <p id="productCounter"> <strong> Productos Existentes : </strong> <span id="productCount">13</span></p>
