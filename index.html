@@ -550,7 +550,21 @@ canvas {
 }
 
 /*mimodel*/
+/* Agrega esto a tu archivo CSS */
+.hidden {
+    display: none;
+    background-color: #000000;
+}
 
+.slide-down {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.ingredients-list ul li {
+  color: black;
+}
 
 
 
@@ -794,6 +808,16 @@ canvas {
                                   <img class="card-img-top" src="./fotos/dos.jpeg" alt="Card image" style="width:100%">
                                   <div class="card-body">
                                   <h4 class="card-title">Muffins de chocolate y vainilla   </h4>
+                                      <button class="btn btn-primary show-ingredients-btn">Ver ingredientes</button>
+                                  <div class="ingredients-list hidden">
+                                      <h5>Ingredientes:</h5>
+                                      <ul>
+                                          <li>Chocolate</li>
+                                          <li>Vainilla</li>
+                                          <li>Harina</li>
+                                          <!-- Agrega más ingredientes aquí -->
+                                      </ul>
+                                  </div>
                                   </div>
                               </div>
                             </div>
@@ -1613,6 +1637,19 @@ likeButton.addEventListener('click', () => {
   fireConfetti();
 });
 
+
+     document.addEventListener("DOMContentLoaded", function () {
+        const showIngredientsButton = document.querySelector(".show-ingredients-btn");
+        const ingredientsList = document.querySelector(".ingredients-list");
+
+        showIngredientsButton.addEventListener("click", function () {
+            if (ingredientsList.classList.contains("hidden")) {
+                ingredientsList.classList.remove("hidden");
+            } else {
+                ingredientsList.classList.add("hidden");
+            }
+        });
+    });
 
 
 
