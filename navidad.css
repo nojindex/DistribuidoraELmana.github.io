@@ -12,7 +12,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 16vh;
+    height: 17vh;
     background-image: url(https://static.vecteezy.com/system/resources/previews/004/649/669/non_2x/christmas-food-background-with-gingerbread-candy-cane-and-hot-chocolate-free-vector.jpg); /* Cambia el color de fondo según tus necesidades */
     background-color: rgb(168, 168, 168);
     background-size: cover;
@@ -36,6 +36,8 @@ header {
   .imagen{
     border: 2px solid  rgb(255, 255, 255);
     border-style: dotted;
+         width:180px;
+
   }
 
   /*arbol*/
@@ -289,7 +291,7 @@ header {
     /* Ajusta otros estilos según tus necesidades */
 
     header {
-      height:22vh;
+      height:17vh;
     }
     footer li a {
       text-align: center;
@@ -301,6 +303,10 @@ header {
     h3{
       font-size:40px;
     }
+      .imagen{
+      width:150px;
+    }
+   
     
    
 
