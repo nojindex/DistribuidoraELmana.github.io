@@ -703,6 +703,42 @@ canvas {
 
 }
 
+        /*dialog*/
+
+dialog{
+  border-radius: 20px;
+}
+
+dialog p {
+  color: black;
+  margin-top:20px;
+  font-size: 25px;
+  text-align: justify;
+  padding: 5  px;
+}
+
+dialog button{
+  border: 2px solid black;
+  font-family: cursive;
+  cursor: pointer;
+  width: 150px;
+  background-color: red;
+  color: white;
+  font-size: 25px;
+
+}
+
+
+.dialogshow{
+  text-align: center;
+  display: block;
+  margin: 20px auto;
+  background-color:rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white !important;
+}
+
 
     </style>
 
@@ -853,6 +889,25 @@ canvas {
       <!--middle of page -->
                      <hr>
       <!---->  <h1 class="text-first">Productos <br> Disponibles</h1>
+
+
+        
+        <dialog>
+          <button autofocus>close</button>
+
+          <p>Un pequeño incapie</p>
+
+          <p>Querido cliente, nos complace informarte que para brindarte el mejor servicio posible, ahora estamos solicitando que los pedidos se realicen con al menos 3 días de anticipación. Esta medida nos permite preparar tus productos con cuidado y asegurar que recibas exactamente lo que deseas, fresco y en perfecto estado.</p>
+
+          <p>Queremos agradecerte por tu comprensión y colaboración en este proceso. Al hacer tus pedidos con anticipación, nos ayudas a planificar nuestra producción de manera eficiente y a garantizar tu satisfacción en cada compra.</p>
+          
+          <p>Por favor, toma en cuenta este nuevo requisito al realizar tu próximo pedido. Estamos aquí para responder a cualquier pregunta que puedas tener y para asegurarnos de que tu experiencia de compra sea lo más placentera posible.</p>
+          
+          <p>Gracias por confiar en nosotros y por ser parte de nuestra comunidad. ¡Esperamos seguir sirviéndote con los mejores productos y servicios!</p>
+          
+
+      </dialog>
+      <button class="dialogshow" >Mostar nuevos requerimientos </button>
 
       <!--BOTON NAVIDAD-->
 
@@ -2152,6 +2207,22 @@ likeButton.addEventListener('click', () => {
             });
         });
     });
+
+
+/*dialog*/
+    const dialog = document.querySelector("dialog");
+const showItems = document.querySelector("dialog + button");
+const closeItems = document.querySelector("dialog button");
+
+
+showItems.addEventListener("click" , () =>{
+  dialog.showModal();
+})
+
+closeItems.addEventListener('click' ,() =>{
+  dialog.close();
+})
+
 
 
 
