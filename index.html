@@ -705,8 +705,17 @@ canvas {
 
         /*dialog*/
 
+/*dialog*/
+
 dialog{
   border-radius: 20px;
+  width: 1000px;
+}
+
+.icapie{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
 dialog p {
@@ -714,7 +723,7 @@ dialog p {
   margin-top:20px;
   font-size: 25px;
   text-align: justify;
-  padding: 5  px;
+  padding: 5px;
 }
 
 dialog button{
@@ -725,7 +734,6 @@ dialog button{
   background-color: red;
   color: white;
   font-size: 25px;
-
 }
 
 
@@ -739,6 +747,22 @@ dialog button{
   border: 1px solid white !important;
 }
 
+
+@media (max-width: 768px) {
+  dialog p {
+    font-size: 13px;
+  }
+  dialog button{
+    width:100px;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+  }
+  dialog{
+    width: 800px;
+  }
+}
 
     </style>
 
@@ -895,7 +919,7 @@ dialog button{
         <dialog>
           <button autofocus>close</button>
 
-          <p>Un pequeño incapie</p>
+           <p class="icapie">Un pequeño informacion</p>
 
           <p>Querido cliente, nos complace informarte que para brindarte el mejor servicio posible, ahora estamos solicitando que los pedidos se realicen con al menos 3 días de anticipación. Esta medida nos permite preparar tus productos con cuidado y asegurar que recibas exactamente lo que deseas, fresco y en perfecto estado.</p>
 
